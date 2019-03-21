@@ -1,0 +1,16 @@
+struct Punto {
+	 x:int;
+	 y:int;
+	 x:char;
+};
+
+
+
+main()
+{
+	var ia_a:int;
+	ia_a = 0;
+	while (ia_a < 8) {
+	   	ia_a = ia_a + 1;
+	}
+}

@@ -1,0 +1,29 @@
+var i:int;
+var a:char;
+
+main()
+{
+	switch(i)
+	{
+		case 10:
+			print 5;
+			print 4;
+			break;	
+	}
+	
+	switch('a')
+	{
+		case 10:
+			print 5;
+			print 4;
+			break;				
+	}
+	
+	switch(a)
+	{
+		case 10:
+			print 5;
+			print 4;
+			break;
+	}
+}

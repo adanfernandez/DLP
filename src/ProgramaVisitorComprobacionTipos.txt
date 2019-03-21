@@ -1,0 +1,74 @@
+var integer:int;
+var character:char;
+var real:float;
+
+var i:int;
+var f:float;
+var ara:[5] int;
+var arb:[6] int;
+ 
+struct estructura  {
+  a:int;
+};
+
+
+var a:estructura;
+ 
+hola():int{
+	print (i && f); 							// * Error 1 , las lógicas deben ser de enteros -
+	print(i && i || i || i);
+	i = a.a + arb[4];
+  	print(a >= 3); 								// * Error 2   las comparaciones deben de ser del mismo tipo (int, float32, char). -
+  	if(f) {     								// * Error 3 si  -
+    	while(i) {     					 			// * Error 4 si  -
+      		print(5);   						// * Error 5 si  -
+      		print('a');						// * Error variable no existe   -
+		}
+  	}
+  	return 4.3;									// * Error tipo de retorno inválido  -
+ }
+ 
+comprobarTipos(){
+ 	if (9 > 8) {
+ 		if (9 > 2.3) {}							// * Error -  -
+ 		print(7 <= 9.8);						// * Error  -
+ 		if ('2' || '4'){}							// * Error -  -
+ 	}
+ }
+ 
+var v:[10]int;
+ 
+funcion343(param:int){
+ 	//var param:int;									// * Error, no se puede definir variables con el mismo nombre que parámetros  -
+ 	if(v[5]){
+ 	}
+ }
+ 
+var param:int;
+ 
+/*funcion343() {							// * Error, no hay sobrecarga   -
+ 	hola();
+ }*/
+ 
+/*funcion567(para1:float, para1:int){	// * Error, parámetros repetidos.   -
+ 	funcion343(5);
+ }*/
+ 
+funcion(a:int, b:float, c:char){
+ 	var i:int;
+	i[0]=0;     								 // * Error 1  -  -
+  	v[3]=3.4;    								 // * Error 2  -
+  	v[1][2]=9; 									 // * Error 3  -
+ 	return 4;									 // * Error,no se debe retornar  -
+ }
+
+struct date { 
+   day:int;
+   month:int;
+   day:float; 								// * Error variable day repetida  -
+ };
+
+funcionSinretorno():int {					// * Error, la función necesita sentencia return  -
+ 	var s:int;
+ 	s = 9;
+ } 

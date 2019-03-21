@@ -1,0 +1,20 @@
+#source "switchCase.txt"
+
+	 ' * var i Int (Offset 0)
+' Invocation to the main function
+call main
+halt
+ main:
+ ' * Parametros
+ ' * Variables Locales
+
+	enter 0
+
+#line	5
+	pusha 0
+	pushi 10
+	pushi 5
+	outi
+	pushi 4
+	outi
+	ret 0, 0, 0

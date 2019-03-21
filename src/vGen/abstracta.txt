@@ -1,0 +1,44 @@
+CATEGORIES
+expresion, sentencia, tipo, definicion
+
+NODES
+programa -> definiciones:definicion*;
+
+definicionVariable:definicion -> nombre:ident tipo;
+
+definicionFuncion:definicion -> nombre:string parametros:parametro* retorno:tipo definiciones:definicionVariable* sentencias:sentencia*;
+parametro: definicion -> nombre:string tipo;
+
+print:sentencia -> expresion;
+printsp:sentencia -> expresion;
+read:sentencia -> expresion;
+asigna:sentencia -> left:expresion right:expresion;
+condIf:sentencia -> condicion:expresion cuerpo:sentencia* condElse;
+condElse -> instrucciones:sentencia*;
+bucleWhile:sentencia -> condicion:expresion cuerpo:sentencia*;
+return:sentencia -> devolucion:expresion;
+
+
+
+intType:tipo-> ;
+floatType:tipo-> ;
+charType:tipo-> ;
+identType:tipo-> ;
+Array:tipo-> dimension:expresion retorno:tipo;
+NoRetorno:tipo-> ;
+
+
+
+definicionEstructura:definicion -> nombre:string  variablesEstructura:definicionVariable*;
+
+
+Operador:expresion -> left:expresion operador:string right:expresion;
+Asignacion:expresion -> left:expresion right:expresion;
+Comparacion:expresion -> left:expresion operador:string right:expresion;
+vacio:expresion -> ;
+literalInt:expresion -> valor:string;
+literalReal:expresion -> valor:string;
+CteChar:expresion -> valor:string;
+ident:expresion -> valor:string;
+cast:expresion -> tipo expr:expresion;
+invocarFuncion:expresion -> nombre:ident parametros:parametro*;

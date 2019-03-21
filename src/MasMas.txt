@@ -1,0 +1,19 @@
+var arr:[10]int;
+var arr2:[10][10]int;
+
+main()
+{
+	var i:int;
+	var j:int;
+	i = 0;
+	i = i + 1;
+	i++;
+	
+	if(i>0)
+	{
+		i++;
+	}
+	
+	i = 4;
+	i++;
+}
